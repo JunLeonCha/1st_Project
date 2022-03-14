@@ -1,0 +1,8 @@
+/* Centrer le texte*/
+.text-center {
+  text-align: center;
+}
+
+.margin-Y-lg {
+  margin: 40px;
+}

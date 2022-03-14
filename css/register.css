@@ -1,0 +1,43 @@
+/*Div 1. : Div Register Général*/
+.container-form-register {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  padding-top: 20px;
+  text-align: center;
+  background: rgba(54, 49, 49, 0.877);
+  width: 400px;
+  font-size: 14px;
+}
+
+/*Div 1.1 : Div, Contient Label et Input */
+.container-form-register .container-label-input {
+  margin: 4px auto;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+/*Style de l'input Dans la div 1.1 */
+.container-form-register .container-label-input input {
+  background: rgba(0, 0, 0, 0.432);
+  height: 30px;
+  border-radius: 4px;
+  color: white;
+}
+
+/*Style du button dans la div 1.1*/
+.container-form-register .container-button button {
+  margin: 30px auto;
+  background-color: #000000dc; /* Green */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}

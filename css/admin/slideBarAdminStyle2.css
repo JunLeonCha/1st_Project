@@ -1,0 +1,236 @@
+/************************ Screen Mobile **********************/
+@media only screen and (max-width: 600px) {
+  /*div general*/
+  .container-navbar {
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s all ease;
+  }
+
+  #slideNavbar.active {
+    background-color: cadetblue;
+    height: 60px;
+  }
+
+  .container-navbar .container-logo-And-name {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    top: -100%;
+    right: 20px;
+    margin: 25px 0;
+    transition: all 0.4s ease-in-out;
+  }
+
+  #slideNavbar.active .container-logo-And-name {
+    top: 0;
+  }
+
+  .container-navbar .container-logo-And-name .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+  }
+
+  .container-navbar .container-logo-And-name .name {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-navbar .container-link {
+    font-size: 12px;
+    background-color: cadetblue;
+    position: fixed;
+    left: -100%;
+    top: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    padding-top: 50px;
+  }
+
+  #slideNavbar.active .container-link {
+    left: 0;
+  }
+
+  .container-navbar .container-link .linkNav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px;
+  }
+
+  .container-navbar .menu {
+    background: black;
+    color: white;
+    font-size: 22px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 48%;
+    top: 22px;
+    transition: 0.6s all ease;
+    border-radius: 40%;
+  }
+  #slideNavbar.active .menu {
+    background: none;
+    color: black;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50px;
+    top: 22px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /*div general*/
+  .container-navbar .container-logo-And-name {
+    font-size: 10px;
+  }
+}
+
+/******************Screen Computer***************/
+@media only screen and (min-width: 600px) {
+  /*div general*/
+  .container-navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: sienna;
+    height: 100%;
+    width: 90px;
+    transition: 0.6s all ease;
+  }
+
+  /*** style de la sidebar lorsqu'elle se déroule ***/
+  #slideNavbar.active {
+    width: 250px;
+  }
+  /*div logo and name*/
+  .container-navbar .container-logo-And-name {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    left: -100%;
+    margin: 25px 0;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+  }
+
+  /*style de la div container-logo and Name quand la sidebar est déroulé*/
+  #slideNavbar.active .container-logo-And-name.active {
+    position: 0;
+    opacity: 1;
+  }
+
+  /*style du logo*/
+  .container-navbar .container-logo-And-name .logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    left: 30px;
+  }
+
+  /*style du nom*/
+  .container-navbar .container-logo-And-name .name {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  /*style div container-link*/
+  .container-navbar .container-link {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*style div linkNav*/
+  .container-navbar .container-link .linkNav {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 30px;
+    color: white;
+    font-size: 17px;
+    transition: all 0.1s ease-in-out;
+    width: 200px;
+  }
+
+  #slideNavbar.active .container-link .linkNav {
+    cursor: pointer;
+  }
+
+  /*style survolement de la div boxIcons*/
+  #slideNavbar.active .container-link .linkNav:hover {
+    color: black;
+    border-radius: 5px;
+    font-size: 19px;
+    background-color: white;
+  }
+
+  /*style .boxIcons*/
+  .container-navbar .container-link .linkNav .boxIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.1s ease-out;
+    cursor: pointer;
+  }
+
+  /*style survolement i dans la div boxIcons*/
+
+  .container-navbar .container-link .linkNav .boxIcons:hover {
+    background-color: white;
+    color: black;
+  }
+
+  /*style survolement i dans la div boxIcons quand la slideNavbar est déroulé*/
+  #slideNavbar.active .container-link .linkNav .boxIcons:hover {
+    background: none;
+  }
+
+  /*Style paragraphe Dans la div linkNav*/
+  .container-navbar .container-link .linkNav .opacitySlide {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.1s ease-out;
+    width: 60%;
+  }
+
+  /*Style du text opacitySlide quand la sidebar est déroulé*/
+  #slideNavbar.active .container-link .linkNav .opacitySlide {
+    opacity: 1;
+  }
+
+  /*div Menu*/
+  .container-navbar .menu {
+    position: absolute;
+    left: 35px;
+    top: 11px;
+    transition: 0.6s all ease;
+  }
+
+  .container-navbar .menu.active {
+    position: absolute;
+    left: 200px;
+  }
+
+  /*style i dans la div menu (boxicons)*/
+  .container-navbar .menu i {
+    font-size: 32px;
+    color: white;
+  }
+}

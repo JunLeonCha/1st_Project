@@ -1,0 +1,29 @@
+.table-boarder-collapse-op {
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.selectGame {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+tbody tr span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span i {
+  font-size: 20px;
+}
+
+.display-block-update {
+  display: none;
+}
+
+.display-block-update.active {
+  background-color: white;
+  display: flex;
+}

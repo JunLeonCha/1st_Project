@@ -1,0 +1,270 @@
+.navAdmin-Body {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*Position de la sidebar, avec une largeur de 78px*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 78px;
+  background: #11101d;
+  padding: 6px 14px;
+  transition: all 0.5s ease;
+  z-index: 9000;
+}
+
+/*Position de la sidebar, avec une largeur de 240px lorsque qu'elle se déroule*/
+.sidebar.active {
+  width: 240px;
+}
+
+/*Organise la sidebar, Opacité des texte à Zero*/
+.sidebar .logo_content .logo {
+  color: #fff;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+/*Opacité passe à 1 quand la navbar se déroule*/
+.sidebar.active .logo_content .logo {
+  opacity: 1;
+}
+
+.sidebar .logo_name {
+  position: fixed;
+  opacity: 0;
+  left: 50px;
+  transition: all 0.5s ease;
+}
+
+/*Opacité passe à 1 quand la navbar se déroule*/
+.sidebar.active .logo_name {
+  left: 50px;
+  opacity: 1;
+}
+
+/*Dimension du logo*/
+.logo_content .logo i {
+  font-size: 28px;
+  margin-right: 5px;
+}
+
+.logo_content .logo .logo_name {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/*Affiche, position et couleur du boutton menu déroulant, */
+.sidebar #btn-hamburger {
+  position: absolute;
+  color: #fff;
+  left: 50%;
+  top: 6px;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-45%);
+}
+
+/*Lorsque le menu se déroule, fais glisser le boutton menu déroulant vers la droite*/
+.sidebar.active #btn-hamburger {
+  left: 90%;
+}
+
+/*Margin entre ul dans la div sidebar*/
+.sidebar .sidebar-Ul {
+  margin-top: 20px;
+  padding: 0;
+}
+
+/**/
+.sidebar .sidebar-Ul li {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin: 0 5px;
+  list-style: none;
+  line-height: 50px;
+  border-radius: 12px;
+}
+
+/* Description liste when hover*/
+.sidebar .sidebar-Ul li .tooltip {
+  position: absolute;
+  left: 122px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  height: 35px;
+  width: 122px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0s;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+}
+
+.sidebar.active .sidebar-Ul li .tooltip {
+  display: none;
+}
+
+.sidebar .sidebar-Ul li:hover .tooltip {
+  transition: all 0.5s ease;
+  opacity: 1;
+  top: 50%;
+}
+
+/* Description for long name-liste when hover*/
+.sidebar .sidebar-Ul li .tooltip-lg {
+  position: absolute;
+  left: 162px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  height: 35px;
+  width: 180px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0s;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+}
+
+.sidebar.active .sidebar-Ul li .tooltip-lg {
+  display: none;
+}
+
+.sidebar .sidebar-Ul li:hover .tooltip-lg {
+  transition: all 0.5s ease;
+  opacity: 1;
+  top: 50%;
+}
+
+.sidebar .sidebar-Ul li input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  background: #1d1b31;
+  padding-left: 50px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.sidebar .sidebar-Ul li .bx-search {
+  position: absolute;
+  z-index: 99;
+  color: #fff;
+  font-size: 22px;
+  transition: all 0.5s ease;
+}
+.sidebar .sidebar-Ul li .bx-search:hover {
+  background: #fff;
+  color: #1d1b31;
+}
+
+.sidebar .sidebar-Ul li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.sidebar .sidebar-Ul li a:hover {
+  color: #11101d;
+  background: #fff;
+}
+
+.sidebar .sidebar-Ul li i {
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.sidebar .sidebar-Ul li .box-icons {
+  padding-left: 16px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.sidebar .links-name {
+  padding-left: 25px;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active .links-name {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*Bottom navbar Admin, contient déconnexion*/
+.bottom-content li a {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.bottom-content li a:hover {
+  color: #11101d;
+  background: #fff;
+}
+
+.bottom-content li a i {
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.bottom-content span {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active .bottom-content span {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media screen and (max-height: 658) {
+  .bottom-content li a {
+  }
+}

@@ -1,0 +1,33 @@
+.box-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.background-thead {
+  background: deeppink;
+}
+
+tbody,
+tr,
+td,
+th {
+  border: 2px solid black;
+  padding: 0 12px;
+}
+
+.delete {
+  padding: 3px 0;
+  background: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.bxs-folder-minus {
+  font-size: 24px;
+}

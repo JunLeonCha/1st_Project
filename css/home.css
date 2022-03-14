@@ -1,0 +1,60 @@
+/*Style Home*/
+
+/*div general*/
+.container-general-home {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/*div 1. : Div general*/
+.container-general-home .container-home-article {
+  margin: 0 30px;
+  display: flex;
+}
+
+.container-general-home .container-home-article .p-Article {
+  margin: 0 30px;
+}
+/* Fin de la div 1. */
+
+/* div 1.2 : Div paragraphe, anchors et imag*/
+.container-general-home .container-game-home {
+  width: 60%;
+  margin: 90px auto;
+  text-align: center;
+}
+
+.container-general-home .container-game-home p /*paragraphe*/ {
+  margin-bottom: 40px;
+}
+
+.container-general-home .container-game-home .link-game /*Anchors*/ {
+  color: black;
+}
+
+.container-general-home .container-game-home a img /*Image*/ {
+  height: 50%;
+  width: 50%;
+  border-radius: 7px;
+}
+/* Fin de la div 1.2*/
+
+/****** Party Mobile ******/
+@media (max-width: 600px) {
+  /*div general*/
+  .container-general-home {
+    font-size: 13px;
+  }
+  /*1st div*/
+  .container-home-article {
+    margin: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .p-Article {
+    margin: 20px 0px;
+  }
+}
